@@ -28,11 +28,11 @@ namespace QuanLyNhaThuoc
         private void button1_Click(object sender, EventArgs e)
         {
             HoaDonBan hoaDonBan = new HoaDonBan();
-            hoaDonBan.nguoiMua = "Le Thi Lanh";
-            hoaDonBan.tenThuoc = "Decalgen";
-            hoaDonBan.maThuoc = "DCE";
-            hoaDonBan.soLuong = 10;
-            hoaDonBan.donGia = 10000;
+            hoaDonBan.nguoiMua = "Trần Đăng Tín Tín Tín";
+            hoaDonBan.tenThuoc = "Tín Tín Tín";
+            hoaDonBan.maThuoc = "DCE - update";
+            hoaDonBan.soLuong = 11;
+            hoaDonBan.donGia = 110000;
             hoaDonBanDB.insert(hoaDonBan);
             loadDB();
         }
@@ -41,7 +41,19 @@ namespace QuanLyNhaThuoc
         {
             DataSet ds = hoaDonBanDB.getAll();
             dataGridView1.DataSource = ds.Tables[0];
-            dataGridView1.DataMember = "HOADON_BAN";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HoaDonBan hoaDonBan = new HoaDonBan();
+            hoaDonBan.id = 2;
+            hoaDonBan.nguoiMua = "Trần Đăng Tín Tín Tín";
+            hoaDonBan.tenThuoc = "Decalgen Tín - update";
+            hoaDonBan.maThuoc = "DCE - update";
+            hoaDonBan.soLuong = 11;
+            hoaDonBan.donGia = 11000;
+            hoaDonBanDB.update(hoaDonBan);
+            loadDB();
         }
     }
 }

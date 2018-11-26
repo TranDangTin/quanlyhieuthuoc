@@ -38,5 +38,33 @@ namespace QuanLyNhaThuoc
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public void update(HoaDonBan hoaDonBan)
+        {
+            string sql = "update HOADON_BAN set ";
+            sql += "NguoiMua =N'" + hoaDonBan.nguoiMua + "',";
+            sql += "TenThuoc=N'" + hoaDonBan.tenThuoc + "',";
+            sql += "MaThuoc='" + hoaDonBan.maThuoc + "',";
+            sql += "SoLuong=" + hoaDonBan.soLuong + ",";
+            sql += "DonGia=" + hoaDonBan.donGia + " ";
+            sql += "where id=" + hoaDonBan.id;
+            SqlConnection cnn = Database.getConnection();
+            cnn.Open();
+            using (SqlCommand cmd = new SqlCommand(sql, cnn))
+            {
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void delete(HoaDonBan hoaDonBan)
+        {
+            string sql = "delete from HOADON_BAN where id=" + hoaDonBan.id;
+            SqlConnection cnn = Database.getConnection();
+            cnn.Open();
+            using (SqlCommand cmd = new SqlCommand(sql, cnn))
+            {
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

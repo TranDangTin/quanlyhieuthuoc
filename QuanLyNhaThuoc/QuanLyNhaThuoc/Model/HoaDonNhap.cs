@@ -8,8 +8,8 @@ namespace QuanLyNhaThuoc
 {
     class HoaDonNhap
     {
-        private long id { get; set; }
-        private string tenThuoc { get; set; }
-        private DateTime hanSuDung { get; set; }
+        public long id { get; set; }
+        public string tenThuoc { get; set; }
+        public DateTime hanSuDung { get; set; }
     }
 }
