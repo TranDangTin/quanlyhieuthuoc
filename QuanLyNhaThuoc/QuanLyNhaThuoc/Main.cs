@@ -13,30 +13,35 @@ namespace QuanLyNhaThuoc
 {
     public partial class Main : Form
     {
+        private HoaDonBanDB hoaDonBanDB;
         public Main()
         {
+            hoaDonBanDB = new HoaDonBanDB();
             InitializeComponent();
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Getting Connection ...");
-            SqlConnection conn = Database.getConnection();
+            loadDB();
+        }
 
-            try
-            {
-                Console.WriteLine("Openning Connection ...");
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HoaDonBan hoaDonBan = new HoaDonBan();
+            hoaDonBan.nguoiMua = "Le Thi Lanh";
+            hoaDonBan.tenThuoc = "Decalgen";
+            hoaDonBan.maThuoc = "DCE";
+            hoaDonBan.soLuong = 10;
+            hoaDonBan.donGia = 10000;
+            hoaDonBanDB.insert(hoaDonBan);
+            loadDB();
+        }
 
-                conn.Open();
-
-                Console.WriteLine("Connection successful!");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-
-            Console.Read();
+        private void loadDB()
+        {
+            DataSet ds = hoaDonBanDB.getAll();
+            dataGridView1.DataSource = ds.Tables[0];
+            dataGridView1.DataMember = "HOADON_BAN";
         }
     }
 }

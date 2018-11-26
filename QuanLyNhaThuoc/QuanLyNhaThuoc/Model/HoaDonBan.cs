@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyNhaThuoc.Model
+namespace QuanLyNhaThuoc
 {
     class HoaDonBan
     {
-        private long id { get; set; }
-        private string nguoiMua { get; set; }
-        private string tenThuoc { get; set; }
-        private string maThuoc { get; set; }
-        private int soLuong { get; set; }
-        private int donGia { get; set; }
+        public long id { get; set; }
+        public string nguoiMua { get; set; }
+        public string tenThuoc { get; set; }
+        public string maThuoc { get; set; }
+        public int soLuong { get; set; }
+        public int donGia { get; set; }
     }
 }
