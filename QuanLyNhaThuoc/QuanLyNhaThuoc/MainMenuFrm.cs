@@ -36,5 +36,10 @@ namespace QuanLyNhaThuoc
         {
             new HoaDonNhapThuocFrm().Show();
         }
+
+        private void lienHeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new LienHeFrm().Show();
+        }
     }
 }

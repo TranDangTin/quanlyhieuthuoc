@@ -126,7 +126,6 @@ namespace QuanLyNhaThuoc
             {
 
             }
-            app.Quit();
         }
     }
 }

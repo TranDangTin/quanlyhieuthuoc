@@ -114,6 +114,7 @@
             this.liênHệToolStripMenuItem.Name = "liênHệToolStripMenuItem";
             this.liênHệToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.liênHệToolStripMenuItem.Text = "Liên hệ";
+            this.liênHệToolStripMenuItem.Click += new System.EventHandler(this.lienHeToolStripMenuItem_Click);
             // 
             // MainMenuFrm
             // 

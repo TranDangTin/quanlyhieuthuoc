@@ -61,6 +61,12 @@
     <Compile Include="HoaDonNhapThuocFrm.Designer.cs">
       <DependentUpon>HoaDonNhapThuocFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LienHeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LienHeFrm.Designer.cs">
+      <DependentUpon>LienHeFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDonNhapThuocFrm.resx">
       <DependentUpon>HoaDonNhapThuocFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LienHeFrm.resx">
+      <DependentUpon>LienHeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuFrm.resx">
       <DependentUpon>MainMenuFrm.cs</DependentUpon>
