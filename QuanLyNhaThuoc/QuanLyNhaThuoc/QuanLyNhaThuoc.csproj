@@ -55,11 +55,17 @@
     <Compile Include="HoaDonBanThuocFrm.Designer.cs">
       <DependentUpon>HoaDonBanThuocFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="HoaDonNhapThuocFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="HoaDonNhapThuocFrm.Designer.cs">
+      <DependentUpon>HoaDonNhapThuocFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuFrm.Designer.cs">
+      <DependentUpon>MainMenuFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\HoaDonBan.cs" />
     <Compile Include="Model\HoaDonNhap.cs" />
@@ -68,8 +74,11 @@
     <EmbeddedResource Include="HoaDonBanThuocFrm.resx">
       <DependentUpon>HoaDonBanThuocFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <EmbeddedResource Include="HoaDonNhapThuocFrm.resx">
+      <DependentUpon>HoaDonNhapThuocFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuFrm.resx">
+      <DependentUpon>MainMenuFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

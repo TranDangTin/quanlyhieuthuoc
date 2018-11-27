@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaThuoc
 {
-    public partial class MainMenu : Form
+    public partial class MainMenuFrm : Form
     {
-        public MainMenu()
+        public MainMenuFrm()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace QuanLyNhaThuoc
         private void btnBanThuoc_Click(object sender, EventArgs e)
         {
             new HoaDonBanThuocFrm().Show();
+        }
+
+        private void btnNhapThuoc_Click(object sender, EventArgs e)
+        {
+            new HoaDonNhapThuocFrm().Show();
         }
     }
 }

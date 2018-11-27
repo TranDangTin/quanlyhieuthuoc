@@ -10,6 +10,6 @@ namespace QuanLyNhaThuoc
     {
         public long id { get; set; }
         public string tenThuoc { get; set; }
-        public DateTime hanSuDung { get; set; }
+        public string hanSuDung { get; set; }
     }
 }

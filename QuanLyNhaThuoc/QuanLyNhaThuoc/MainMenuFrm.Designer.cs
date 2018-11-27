@@ -1,6 +1,6 @@
 ﻿namespace QuanLyNhaThuoc
 {
-    partial class MainMenu
+    partial class MainMenuFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -90,14 +90,15 @@
             this.btnNhapThuoc.TabIndex = 1;
             this.btnNhapThuoc.Text = "Quản Lý Hóa Đơn Nhập Thuốc";
             this.btnNhapThuoc.UseVisualStyleBackColor = true;
+            this.btnNhapThuoc.Click += new System.EventHandler(this.btnNhapThuoc_Click);
             // 
-            // MainMenu
+            // MainMenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 396);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "MainMenu";
+            this.Name = "MainMenuFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý nhà thuốc";
             this.tableLayoutPanel1.ResumeLayout(false);
