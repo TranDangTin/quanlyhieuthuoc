@@ -127,7 +127,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "HoaDonNhapThuocFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "s";
+            this.Text = "Quản lý hóa đơn nhập thuốc";
             this.Load += new System.EventHandler(this.HoaDonNhapThuocFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -40,7 +40,7 @@ namespace QuanLyNhaThuoc
         {
             string sql = "update HOADON_NHAP set ";
             sql += "TenThuoc=N'" + hoaDonNhap.tenThuoc + "',";
-            sql += "HanSuDung=" + hoaDonNhap.hanSuDung + " ";
+            sql += "HanSuDung='" + hoaDonNhap.hanSuDung + "' ";
             sql += "where id=" + hoaDonNhap.id;
             SqlConnection cnn = Database.getConnection();
             cnn.Open();

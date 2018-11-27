@@ -65,7 +65,12 @@ namespace QuanLyNhaThuoc
             {
                 id = row.Cells[0].Value.ToString();
                 txtTenThuoc.Text = row.Cells[1].Value.ToString();
-                txtHanSuDung.Text = row.Cells[2].Value.ToString();
+                string hanSuDung = row.Cells[2].Value.ToString();
+                string[] hanSuDungArr = hanSuDung.Split('-');
+                int year = Int32.Parse(hanSuDungArr[2]);
+                int month = Int32.Parse(hanSuDungArr[1]); ;
+                int day = Int32.Parse(hanSuDungArr[0]); ;
+                txtHanSuDung.Value = new DateTime(year, month, day);
             }
         }
     }
