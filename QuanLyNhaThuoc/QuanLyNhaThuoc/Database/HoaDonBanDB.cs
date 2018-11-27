@@ -66,5 +66,18 @@ namespace QuanLyNhaThuoc
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public DataSet getByNguoiMua(string nguoiMua)
+        {
+            DataSet data = new DataSet();
+            SqlConnection cnn = Database.getConnection();
+            string query = "select * from HOADON_BAN where NguoiMua like @NguoiMua";
+            cnn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(query, cnn);
+            adapter.SelectCommand.Parameters.AddWithValue("@NguoiMua","%" + nguoiMua + "%");
+            adapter.Fill(data);
+            cnn.Close();
+            return data;
+        }
     }
 }
