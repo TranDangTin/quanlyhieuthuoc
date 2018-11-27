@@ -32,6 +32,12 @@ namespace QuanLyNhaThuoc
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (txtTenThuoc.Text == ""
+                || txtHanSuDung.Text == "")
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin");
+                return;
+            }
             HoaDonNhap hoaDonNhap  = new HoaDonNhap();
             hoaDonNhap.tenThuoc = txtTenThuoc.Text;
             hoaDonNhap.hanSuDung = txtHanSuDung.Text;
@@ -51,6 +57,12 @@ namespace QuanLyNhaThuoc
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            if (txtTenThuoc.Text == ""
+                || txtHanSuDung.Text == "")
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin");
+                return;
+            }
             HoaDonNhap hoaDonNhap = new HoaDonNhap();
             hoaDonNhap.id = long.Parse(id);
             hoaDonNhap.tenThuoc = txtTenThuoc.Text;
@@ -71,6 +83,19 @@ namespace QuanLyNhaThuoc
                 int month = Int32.Parse(hanSuDungArr[1]); ;
                 int day = Int32.Parse(hanSuDungArr[0]); ;
                 txtHanSuDung.Value = new DateTime(year, month, day);
+            }
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            if (txtTimkiem.Text != "")
+            {
+                DataSet ds = hoaDonNhapDB.getByTenThuoc(txtTimkiem.Text);
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+            else
+            {
+                loadDB();
             }
         }
     }

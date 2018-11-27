@@ -65,10 +65,9 @@ namespace QuanLyNhaThuoc
         {
             DataSet data = new DataSet();
             SqlConnection cnn = Database.getConnection();
-            string query = "select * from HOADON_NHAP where TenThuoc like @TenThuoc";
+            string query = "select * from HOADON_NHAP where TenThuoc Like N'%" + tenThuoc + "%'";
             cnn.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(query, cnn);
-            adapter.SelectCommand.Parameters.AddWithValue("@TenThuoc","%" + tenThuoc + "%");
             adapter.Fill(data);
             cnn.Close();
             return data;

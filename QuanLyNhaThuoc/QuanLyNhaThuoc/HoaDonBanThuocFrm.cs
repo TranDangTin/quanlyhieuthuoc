@@ -26,8 +26,18 @@ namespace QuanLyNhaThuoc
             loadDB();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
+            if(txtNguoiMua.Text == "" 
+                || txtTenThuoc.Text == "" 
+                || txtMaThuoc.Text == ""
+                || txtSoLuong.Text == ""
+                || txtDonGia.Text == "")
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin");
+                return;
+            }
+
             HoaDonBan hoaDonBan = new HoaDonBan();
             hoaDonBan.nguoiMua = txtNguoiMua.Text;
             hoaDonBan.tenThuoc = txtTenThuoc.Text;
@@ -44,8 +54,18 @@ namespace QuanLyNhaThuoc
             dataGridView1.DataSource = ds.Tables[0];
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btcCapNhat_Click(object sender, EventArgs e)
         {
+            if (txtNguoiMua.Text == ""
+                || txtTenThuoc.Text == ""
+                || txtMaThuoc.Text == ""
+                || txtSoLuong.Text == ""
+                || txtDonGia.Text == "")
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin");
+                return;
+            }
+
             HoaDonBan hoaDonBan = new HoaDonBan();
             hoaDonBan.id = long.Parse(id);
             hoaDonBan.nguoiMua = txtNguoiMua.Text;
@@ -70,7 +90,7 @@ namespace QuanLyNhaThuoc
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             HoaDonBan hoaDonBan = new HoaDonBan();
             hoaDonBan.id = long.Parse(id);
@@ -81,6 +101,18 @@ namespace QuanLyNhaThuoc
             txtSoLuong.Text = "";
             txtDonGia.Text = "";
             loadDB();
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            if (txtTimkiem.Text != "")
+            {
+                DataSet ds = hoaDonBanDB.getByNguoiMua(txtTimkiem.Text);
+                dataGridView1.DataSource = ds.Tables[0];
+            } else
+            {
+                loadDB();
+            }
         }
     }
 }
