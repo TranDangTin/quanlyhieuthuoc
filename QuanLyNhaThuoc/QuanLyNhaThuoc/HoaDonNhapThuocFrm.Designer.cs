@@ -39,21 +39,23 @@
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnInBaoCao = new System.Windows.Forms.Button();
+            this.cbkHetHanSuDung = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 143);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 141);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(645, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(645, 302);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(582, 41);
+            this.btnXoa.Location = new System.Drawing.Point(498, 57);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 6;
@@ -63,7 +65,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(582, 70);
+            this.btnCapNhat.Location = new System.Drawing.Point(579, 56);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
             this.btnCapNhat.TabIndex = 5;
@@ -73,7 +75,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(582, 12);
+            this.btnThem.Location = new System.Drawing.Point(498, 15);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 4;
@@ -117,7 +119,7 @@
             // 
             // btnTimkiem
             // 
-            this.btnTimkiem.Location = new System.Drawing.Point(582, 111);
+            this.btnTimkiem.Location = new System.Drawing.Point(582, 104);
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(75, 23);
             this.btnTimkiem.TabIndex = 15;
@@ -127,7 +129,7 @@
             // 
             // txtTimkiem
             // 
-            this.txtTimkiem.Location = new System.Drawing.Point(428, 114);
+            this.txtTimkiem.Location = new System.Drawing.Point(428, 107);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.Size = new System.Drawing.Size(145, 20);
             this.txtTimkiem.TabIndex = 16;
@@ -135,17 +137,39 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(300, 118);
+            this.label3.Location = new System.Drawing.Point(300, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 13);
             this.label3.TabIndex = 17;
             this.label3.Text = "Tìm kiếm theo tên thuốc";
+            // 
+            // btnInBaoCao
+            // 
+            this.btnInBaoCao.Location = new System.Drawing.Point(582, 15);
+            this.btnInBaoCao.Name = "btnInBaoCao";
+            this.btnInBaoCao.Size = new System.Drawing.Size(75, 23);
+            this.btnInBaoCao.TabIndex = 18;
+            this.btnInBaoCao.Text = "In báo cáo";
+            this.btnInBaoCao.UseVisualStyleBackColor = true;
+            this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
+            // 
+            // cbkHetHanSuDung
+            // 
+            this.cbkHetHanSuDung.AutoSize = true;
+            this.cbkHetHanSuDung.Location = new System.Drawing.Point(137, 111);
+            this.cbkHetHanSuDung.Name = "cbkHetHanSuDung";
+            this.cbkHetHanSuDung.Size = new System.Drawing.Size(157, 17);
+            this.cbkHetHanSuDung.TabIndex = 19;
+            this.cbkHetHanSuDung.Text = "Thuốc sắp hết hạn sử dụng";
+            this.cbkHetHanSuDung.UseVisualStyleBackColor = true;
             // 
             // HoaDonNhapThuocFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 455);
+            this.Controls.Add(this.cbkHetHanSuDung);
+            this.Controls.Add(this.btnInBaoCao);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.btnTimkiem);
@@ -180,5 +204,7 @@
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnInBaoCao;
+        private System.Windows.Forms.CheckBox cbkHetHanSuDung;
     }
 }

@@ -61,11 +61,21 @@ namespace QuanLyNhaThuoc
             }
         }
 
-        public DataSet getByTenThuoc(string tenThuoc)
+        public DataSet getByTenThuoc(string tenThuoc, bool cbkHetHanSuDun)
         {
             DataSet data = new DataSet();
             SqlConnection cnn = Database.getConnection();
-            string query = "select * from HOADON_NHAP where TenThuoc Like N'%" + tenThuoc + "%'";
+            string query = "select * from HOADON_NHAP where 1=1 ";
+            if (tenThuoc != "")
+            {
+                query += "and TenThuoc Like '%" + tenThuoc + "%' ";
+            }
+            if (cbkHetHanSuDun)
+            {
+                query += "and HanSuDung >= cast(format(DATEADD(dd, DATEDIFF(dd, 0, GETDATE()), -7), 'dd-MM-yyyy') as varchar)";
+                query += "and HanSuDung <= cast(format(DATEADD(dd, DATEDIFF(dd, 0, GETDATE()), -0), 'dd-MM-yyyy') as varchar)";
+            }
+
             cnn.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(query, cnn);
             adapter.Fill(data);

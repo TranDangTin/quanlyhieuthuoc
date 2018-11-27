@@ -45,11 +45,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnInBaoCao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 149);
             this.dataGridView1.Name = "dataGridView1";
@@ -193,11 +195,22 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
+            // btnInBaoCao
+            // 
+            this.btnInBaoCao.Location = new System.Drawing.Point(13, 117);
+            this.btnInBaoCao.Name = "btnInBaoCao";
+            this.btnInBaoCao.Size = new System.Drawing.Size(75, 23);
+            this.btnInBaoCao.TabIndex = 17;
+            this.btnInBaoCao.Text = "In báo cáo";
+            this.btnInBaoCao.UseVisualStyleBackColor = true;
+            this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
+            // 
             // HoaDonBanThuocFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 455);
+            this.Controls.Add(this.btnInBaoCao);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.label6);
@@ -244,6 +257,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnInBaoCao;
     }
 }
 

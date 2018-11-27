@@ -26,5 +26,15 @@ namespace QuanLyNhaThuoc
         {
             new HoaDonNhapThuocFrm().Show();
         }
+
+        private void quanLyHoaDonBanThuocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new HoaDonBanThuocFrm().Show();
+        }
+
+        private void quanLyHoaDonNhapThuocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new HoaDonNhapThuocFrm().Show();
+        }
     }
 }
