@@ -14,5 +14,6 @@ namespace QuanLyNhaThuoc
         public string maThuoc { get; set; }
         public int soLuong { get; set; }
         public int donGia { get; set; }
+        public string ngayBan { get; set; }
     }
 }

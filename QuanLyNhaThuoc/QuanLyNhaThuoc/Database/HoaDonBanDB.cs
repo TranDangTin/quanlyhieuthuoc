@@ -24,8 +24,8 @@ namespace QuanLyNhaThuoc
 
         public void insert(HoaDonBan hoaDonBan)
         {
-            string sql = "insert into HOADON_BAN ([NguoiMua], [TenThuoc], [MaThuoc], [SoLuong], [DonGia]) ";
-                   sql += "values(@NguoiMua, @TenThuoc, @MaThuoc, @SoLuong, @DonGia)";
+            string sql = "insert into HOADON_BAN ([NguoiMua], [TenThuoc], [MaThuoc], [SoLuong], [DonGia], [NgayBan]) ";
+                   sql += "values(@NguoiMua, @TenThuoc, @MaThuoc, @SoLuong, @DonGia, @NgayBan)";
             SqlConnection cnn = Database.getConnection();
             cnn.Open();
             using (SqlCommand cmd = new SqlCommand(sql, cnn))
@@ -35,6 +35,7 @@ namespace QuanLyNhaThuoc
                 cmd.Parameters.AddWithValue("@MaThuoc", hoaDonBan.maThuoc);
                 cmd.Parameters.AddWithValue("@SoLuong", hoaDonBan.soLuong);
                 cmd.Parameters.AddWithValue("@DonGia", hoaDonBan.donGia);
+                cmd.Parameters.AddWithValue("@NgayBan", hoaDonBan.ngayBan);
                 cmd.ExecuteNonQuery();
             }
         }
@@ -46,7 +47,8 @@ namespace QuanLyNhaThuoc
             sql += "TenThuoc=N'" + hoaDonBan.tenThuoc + "',";
             sql += "MaThuoc='" + hoaDonBan.maThuoc + "',";
             sql += "SoLuong=" + hoaDonBan.soLuong + ",";
-            sql += "DonGia=" + hoaDonBan.donGia + " ";
+            sql += "DonGia=" + hoaDonBan.donGia + ", ";
+            sql += "NgayBan='" + hoaDonBan.ngayBan + "' ";
             sql += "where id=" + hoaDonBan.id;
             SqlConnection cnn = Database.getConnection();
             cnn.Open();

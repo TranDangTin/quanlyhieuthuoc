@@ -44,6 +44,7 @@ namespace QuanLyNhaThuoc
             hoaDonBan.maThuoc = txtMaThuoc.Text;
             hoaDonBan.soLuong = Int32.Parse(txtSoLuong.Text);
             hoaDonBan.donGia = Int32.Parse(txtDonGia.Text);
+            hoaDonBan.ngayBan = txtNgayBan.Text;
             hoaDonBanDB.insert(hoaDonBan);
             loadDB();
         }
@@ -73,6 +74,7 @@ namespace QuanLyNhaThuoc
             hoaDonBan.maThuoc = txtMaThuoc.Text;
             hoaDonBan.soLuong = Int32.Parse(txtSoLuong.Text);
             hoaDonBan.donGia = Int32.Parse(txtDonGia.Text);
+            hoaDonBan.ngayBan = txtNgayBan.Text;
             hoaDonBanDB.update(hoaDonBan);
             loadDB();
         }

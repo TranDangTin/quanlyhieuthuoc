@@ -46,6 +46,8 @@
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btnInBaoCao = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNgayBan = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,11 +207,31 @@
             this.btnInBaoCao.UseVisualStyleBackColor = true;
             this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(210, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Ngày bán";
+            // 
+            // txtNgayBan
+            // 
+            this.txtNgayBan.CustomFormat = "dd-MM-yyyy";
+            this.txtNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtNgayBan.Location = new System.Drawing.Point(269, 80);
+            this.txtNgayBan.Name = "txtNgayBan";
+            this.txtNgayBan.Size = new System.Drawing.Size(125, 20);
+            this.txtNgayBan.TabIndex = 19;
+            // 
             // HoaDonBanThuocFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 455);
+            this.Controls.Add(this.txtNgayBan);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnInBaoCao);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtTimkiem);
@@ -258,6 +280,8 @@
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnInBaoCao;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker txtNgayBan;
     }
 }
 
